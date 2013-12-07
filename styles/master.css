@@ -21,4 +21,4 @@ table.mineSweeper td.active:hover { border: 1px solid #ffffff; background-color:
 table.mineSweeper td.mine { font-weight: bold; }
 table.mineSweeper td.mined { color: #CC0000; font-weight: bold; border: 3px solid #ff0000; background-color: #000000; background-image: url(../images/explosion.png); background-repeat:no-repeat; background-position:center; }
 table.mineSweeper td.caution { color: #ffae00; font-weight: bold; background-color: #ffd200; background-position: center; background-repeat: no-repeat; border: 1px solid #ff2200; }
-ol { font-size: .85em; width: 200px; }
+ol { font-size: .85em; width: 200px; list-style-type: decimal; }
