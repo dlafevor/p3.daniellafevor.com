@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Minesweeper</title>
+    <link href="styles/master.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.minesweeper.js"></script>
+  </head>
+	<body>
+		<div class="appWrapper">
+			<div class="headerBar">
+				<h1>Minesweeper</h1>
+			</div>
+			<div class="bodyWrapper">
+				<div id="gameLayer">
+					<div class="gameFormLayer">
+						<form id="gameForm">
+							<label for="gameDifficulty">Difficulty</label>: 
+							<select name="gameDifficulty" id="gameDifficulty">
+								<option value="">Select Difficulty</option>
+								<option value="1">Easy</option>
+								<option value="2">Medium</option>
+								<option value="3">Hard</option>
+							</select>
+						</form>
+					</div>
+					<div class="gameNewLayer">
+						<form id="newGameForm">
+							<input type="button" name="newGameBtn" id="newGameBtn" value="New Game?">
+						</form>
+					</div>
+					<img src="images/Minesweeper_Icon.png" width="200" height="200" alt="Minesweeper - a JavaScript App" class="minesweeperIcon">
+				</div>
+			</div>
+			<div class="footerBar">
+				<img src="images/icon_help.png" width="29" height="29" alt="Help"> <strong>How to Play</strong>
+				<ol>
+					<li>Select your difficulty</li>
+					<li>Click a square.</li>
+					<li>If have not clicked a square containing a mine, that square and all squares ajoining it will turn blue. Squares with a number in them indicate that at least one mine is touching that square (the number corrispondes to the number of mines touching that square).</li>
+					<li>You can mark a square as having a mine under it by alt+clicking on the square</li>
+					<li>If you click a square containing a mine the game is over ... KABLOOIE!!!</li>
+				</ol>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	$('#gameLayer').load('gameBoard.html');
+</script>
