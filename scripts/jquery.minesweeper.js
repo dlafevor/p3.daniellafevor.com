@@ -38,8 +38,7 @@ $.fn.randomFilter = function( size ){
 		this.filter(
 			function( index ){
 				return( index in randomIndexes );
-			}
-		)
+			})
 	);
 };
 $.fn.near = function(){
@@ -98,8 +97,7 @@ $.fn.near = function(){
 		this.initTable();
 	};
  
- 
-	// build table based on values when table is init. 
+ 	// build table based on values when table is init. 
 	MineSweeper.prototype.buildTable = function(){
 		// Build the markup for a given row.
 		var rowHtml = ('<tr>' + $repeatString('<td class="active">&nbsp;</td>', this.columnCount ) + '</tr>');
@@ -221,7 +219,6 @@ $.fn.near = function(){
 		}
 	};
  
- 
 	// Toggle the caution on a given cell
 	MineSweeper.prototype.toggleCaution = function( cell ){
 		if (cell.is( ".caution" )){
@@ -233,8 +230,6 @@ $.fn.near = function(){
 			cell.addClass( "caution" );
 		}
 	};
-
-	window.MineSweeper = MineSweeper;
 	
 	// function for loading various difficulty levels and toggling visibilty of the logo, difficulty select, and "new game" button
 	function loadGameBoard() {
