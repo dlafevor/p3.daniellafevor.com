@@ -21,7 +21,7 @@ $.fn.randomFilter = function( size ){
 	// Loop over the size of the collection to use in the lookup array
 	for (var i = 0 ; i < this.size() ; i++){
 		indexes[ i ] = i;
-	}
+	};
 
 	var randomIndexes = {};
 	for (var i = 0 ; i < size ; i++){
@@ -31,8 +31,7 @@ $.fn.randomFilter = function( size ){
 		randomIndexes[ indexes[ randomIndex ] ] = true;
 		// Remove the selected index from the collection.
 		indexes.splice( randomIndex, 1 );
-
-	}
+	};
 
 	// Return the filtered collection.
 	return(
@@ -72,7 +71,7 @@ $.fn.near = function(){
  
 		// Return the collection
 		return( nearMines );
-	}
+	};
 
   // ----------------------------------------------------------------
 	// Game controller.
@@ -109,12 +108,8 @@ $.fn.near = function(){
 		this.table.html( tableHtml );
 	};
  
-	// I check to see if an end-game has been reached. If so, then I give the option to restart.
+	// Load the won page if it is the end of the game and no mines have been hit
 	MineSweeper.prototype.checkEndGame = function(){
-		var gameOutcome = '';
-		var isEndGame = false;
- 
-		// Check to see if any of the mines have exploded - if not the game is won, and the won screen loads.
 		 if (!this.noMineCells.filter( '.active' ).size()){
 			$('#gameBoardLayer').css('display','none').load('win.html'); 
 		}
